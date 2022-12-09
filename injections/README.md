@@ -1,0 +1,1 @@
+injecthandles - started out as something totally different, but whatever, its a process injection with some stealthy enum. It currently uses CreateRemoteThread for execution, but I have plans to modify that to QueueUserAPC and process snapshotting, maybe setthreadcontext too, i dunno. Modify to suit your needs.
