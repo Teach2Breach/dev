@@ -1,6 +1,6 @@
 Programs for performing enumeration, likely the 1st stage of a process injection of an existing process.
 
-pthandles - enumerate all system processes using NtGetNextProcess, then enum all threads with NtGetNextThread. 
+pthandles - enumerate all system processes using NtGetNextProcess, then enum all threads with NtGetNextThread. Has also been updated to remove common functions and replace with NtQueryInformationProcess and NtQueryInformationThread. 
 
 dupehandle - duplicate a handle with minimum required access for being able to pass to VirtualAllocEx.
 
