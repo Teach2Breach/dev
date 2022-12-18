@@ -166,8 +166,9 @@ typedef struct _THREAD_BASIC_INFORMATION {
     if (NT_SUCCESS(status)) {
     // The thread entry point is stored as a pointer to a function
     threadEntryPoint = (PVOID)tbuffer;
+    
     // Print the thread entry point
-    printf("Thread Entry Point: 0x%p\n", threadEntryPoint);
+    printf("Thread Entry Point: 0x%08X\n", threadEntryPoint);
     } else {
     printf("NtQueryInformationThread failed with status %x\n", status);
     }
