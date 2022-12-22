@@ -1,6 +1,6 @@
 This is WIP.
 
-*updates -* got all the windows error codes 0-1022 added. Moved the error codes to a header file to be used with other tools. The main.c program now is merely to serve as an example of how to use the header file in your own tools.
+**Updates 12/22/22 -** got all the windows error codes 0-1022 added. Moved the error codes to a header file to be used with other tools. The main.c program now is merely to serve as an example of how to use the header file in your own tools.
 
 The idea is to define all the windows sytem error codes in a struct and have some logic to handle converting any error codes retrieved by GetLastError, in your other tools, into human readable format with appropriate error messages for rapid debugging sessions. I'll eventually make it into a header file that can be included in any other tool. I'm also doing a version in Rust for Rust tool dev.
 
