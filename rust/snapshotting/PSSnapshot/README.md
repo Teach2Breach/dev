@@ -1,2 +1,1 @@
-I'll dump some stuff here for working with PSSCaptureSnapshot API. It can be very useful for working with process memory or handles in a stealthy way. More to come, including another process injection.
-
+PSSnapshot - Snapshots a target process with full capture and returns a handle to the snapshot.
