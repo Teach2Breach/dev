@@ -571,7 +571,7 @@ pub fn in_memory_dump(args: Vec<&str>) -> String {
     //perform dump with new handle
     let _ = unsafe{ MiniDumpWriteDump(
         new_handle,
-        new_pid, 
+        0, 
         0 as _, 
         0x00000002,//MINIDUMP_TYPE::MiniDumpWithFullMemory,
         0 as _, 
