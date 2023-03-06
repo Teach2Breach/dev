@@ -1,0 +1,1 @@
+I like lsass dumpers. I have always been fascinated with dumping lsass and the progression of techniques for doing so while evading modern detections. So every so often I play with lsass dumpers or new techniques. (Sometimes old ones too :D ). I will start dropping my various (Rust) lsass dumpers here. 
