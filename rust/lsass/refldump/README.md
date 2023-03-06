@@ -4,6 +4,8 @@
            <BR>As of writing, this tool is not prevented by Windows Defender on latest Win10 build. This version is not currently working with Win11. I think I know the problem, so I'll revisit and push a Win11 compatible version at some point.
   
   **usage**: 
+  <BR>`git clone https://github.com/Teach2Breach/dev.git`<BR>
+  `cd .\dev\rust\lsass\refldump\`
   <Br>compile with Rust:<BR> `cargo build --release`
   <BR>run the binary on target machine:<BR> `.\repldump.exe`
     <BR>
