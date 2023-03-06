@@ -1,0 +1,20 @@
+[package]
+name = "refldump"
+version = "0.1.0"
+edition = "2021"
+author = "@Teach2Breach"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+winapi = { version = "0.3", features = ["heapapi", "winbase", "winhttp", "memoryapi", "processsnapshot"] }
+sysinfo = "0.17"
+safetydump = { path = "./safetydump" }
+base64 = "0.13.0"
+random-string = "1.0.0"
+
+[profile.release]
+opt-level = "z"  # Optimize for size.
+lto = true
+codegen-units = 1
+panic = "abort"
