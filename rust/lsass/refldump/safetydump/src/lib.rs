@@ -3,6 +3,7 @@
 #![allow(unused_mut)]
 #![allow(unused_variables)]
 #![allow(unused_assignments)]
+#![allow(non_camel_case_types)]
 use sysinfo::PidExt;
 use winapi::{
     ctypes::c_void,
@@ -23,28 +24,9 @@ use winapi::{
         },
     },
     um::{
-        handleapi::{DuplicateHandle},
         libloaderapi::{GetProcAddress, LoadLibraryW}, // resolve these dynamically
         psapi::{PPROCESS_MEMORY_COUNTERS, PROCESS_MEMORY_COUNTERS},
         fileapi::{CreateFileW, CREATE_ALWAYS, },
-        processsnapshot::{
-            PssCaptureSnapshot,
-            PssFreeSnapshot,
-            PSS_CAPTURE_FLAGS,
-            PSS_CAPTURE_HANDLES,
-            HPSS, PSS_CAPTURE_VA_CLONE,
-            PSS_CAPTURE_HANDLE_NAME_INFORMATION,
-            PSS_CAPTURE_HANDLE_BASIC_INFORMATION,
-            PSS_CAPTURE_HANDLE_TYPE_SPECIFIC_INFORMATION,
-            PSS_CAPTURE_HANDLE_TRACE,
-            PSS_CAPTURE_THREADS,
-            PSS_CAPTURE_THREAD_CONTEXT,
-            PSS_CAPTURE_THREAD_CONTEXT_EXTENDED,
-            PSS_CREATE_BREAKAWAY,
-            PSS_CREATE_BREAKAWAY_OPTIONAL,
-            PSS_CREATE_USE_VM_ALLOCATIONS,
-            PSS_CREATE_RELEASE_SECTION,
-        },
         winnt::{
             ACCESS_MASK,
             HEAP_ZERO_MEMORY,
@@ -400,7 +382,7 @@ pub fn in_memory_dump(args: Vec<&str>) -> String {
                 pub ReflectionProcessHandle: HANDLE,
                 pub ReflectionThreadHandle: HANDLE,
                 pub ReflectionClientId: CLIENT_ID,
-        };
+        }
     
         //adding RtlCreateProcessReflection function
         let RtlCreateProcessReflection: unsafe fn(
