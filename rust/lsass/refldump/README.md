@@ -7,7 +7,7 @@
   <BR>`git clone https://github.com/Teach2Breach/dev.git`<BR>
   `cd .\dev\rust\lsass\refldump\`
   <Br>compile with Rust:<BR> `cargo build --release`
-  <BR>run the binary on target machine:<BR> `.\repldump.exe`
+  <BR>run the binary on target machine:<BR> `.\refldump.exe`
     <BR>
       a randomly named .bin file will be generated with the dump. It is base64 encoded. I recommend you move this file to a remote linux host for decoding as follows:
       <BR>`base64 -d dsaifluk.bin > dump.bin`<BR>
