@@ -133,6 +133,9 @@ int main(int argc, char *argv[])
         ULONG HandleAttributes,
         ULONG Flags,
         PHANDLE NewProcessHandle);
+    
+    //I'm not actually using NtGetNextThread in this version, but I'll leave it here for you maldev peeps who want to take this to the next level
+    // and avoid creating a new thread. My intention was to manually map to the existing suspended thread... ;)
 
     NTSTATUS NTAPI NtGetNextThread(
         HANDLE ProcessHandle,
