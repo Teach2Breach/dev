@@ -28,7 +28,7 @@ The program takes the name of the target process as a command line argument.
  For example, to inject shellcode into RuntimeBroker.exe, run the following command:
 <BR><BR>
 ```.\PSSnapshot.exe RuntimeBroker.exe```<BR>
-The program will search for a process with a matching filename and inject the shellcode into the process. If successful, the shellcode will execute and launch the Calculator application.<BR><BR>
+The program will search for a process with a matching filename, clone the process, and inject the clone. If successful, the shellcode will execute and launch the Calculator application.<BR><BR>
   
   *As always, this is a Proof of Concept, to highlight techniques you can use for maldev. In this case, I am focusing on using PSSCaptureSnapshot API to create a snapshot of a target process and show how you might then inject into the snapshot process. Note that the snapshot process is a clone process that gets created in a suspended state.<BR><BR>
   It is not completely OPSEC friendly. Although the enum used to obtain the process handle with NtGetNextProcess and DuplicateHandle are stealthy, I am using a really standard injection after that. It also has some obvious gotchas, like the shellcode being in plaintext in the program and not encrypted at compile time or anything. So, as usual, learn from the code and use what you like. It's not meant to be ready to compile and run on target.<BR><BR>
