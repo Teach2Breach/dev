@@ -1,6 +1,6 @@
 # Process Snapshot Shellcode Injection
-This program uses the Windows Process Snapshot API to capture a snapshot of a target process and injects shellcode into the process using a new handle created by duplicating the process handle.
- One of the main reasons I wrote this was to find more ways of performing remote process injections without first creating my own process. I wanted to be able to inject into an existing process. This achieves that (sort of). We do avoid CreateProcess anyway...<BR><BR>
+This program uses the Windows Process Snapshot API to capture a snapshot of a target process and injects shellcode into the clone process.
+ One of the main reasons I wrote this was to find more ways of performing remote process injections without first creating my own process. I wanted to be able to inject into an existing process. This achieves that (sort of). We do avoid CreateProcess anyway... Instead we are injecting a clone of the remote target.<BR><BR>
 
 **API Functions**<BR>
 This program utilizes the following API functions:
