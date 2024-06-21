@@ -4,7 +4,7 @@
 #![allow(unused_variables)]
 #![allow(unused_assignments)]
 #![allow(non_camel_case_types)]
-use sysinfo::PidExt;
+use sysinfo::Pid;
 use winapi::{
     ctypes::c_void,
     shared::{
