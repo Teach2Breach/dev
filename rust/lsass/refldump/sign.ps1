@@ -1,7 +1,7 @@
 ﻿#convert the following script to work from any desktop
 $dir= Read-Host -Prompt 'Certs output directory: '
 $pw= Read-Host -Prompt 'password: '
-$rde=Read-Host -Prompt 'rdump location: '
+$rde=Read-Host -Prompt 'binary location: '
 $cn=Read-Host -Prompt 'issuer to spoof: '
 
 #add a check to locate the needed binaries instead of hardcoding this
