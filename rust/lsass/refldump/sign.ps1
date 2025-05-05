@@ -15,6 +15,6 @@ rm $dir\$cn*
 
 .\signtool.exe sign /fd sha512 /f $dir\$cn.pfx /p $pw $rde 
 
-.\signtool.exe timestamp /t http://timestamp.digicert.com $rde
+.\signtool.exe timestamp /t http://sha256timestamp.ws.symantec.com/sha256/timestamp $rde
 
 cd '~'
